@@ -363,20 +363,7 @@ ul {
     display: none;
 }
 
-.menu{
-    position: fixed;
-    background: rgba(5, 111, 255,.9);
-    z-index: 3;
-    top:0;
-    right: -10em; 
-    width: 10em;
-    height: 100vh;
-    bottom: 0;
-    display: flex;
-    align-items: top;
-    justify-content: left;
-    transition: .2s;
-}
+
 
 .menu.is-active{
     right: 0;
@@ -409,6 +396,20 @@ ul {
 }
 
 @media screen and (max-width: 767px){
+    .menu{
+        position: fixed;
+        background: rgba(5, 111, 255,.9);
+        z-index: 3;
+        top:0;
+        right: -30em; 
+        width: 10em;
+        height: 100vh;
+        bottom: 0;
+        display: flex;
+        align-items: top;
+        justify-content: left;
+        transition: .2s;
+    }
     .burger-button{
         display: block;
     }
