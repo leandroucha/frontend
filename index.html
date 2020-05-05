@@ -153,11 +153,7 @@
         const burgerButton = document.querySelector('#burger-menu');
         const ipad = window.matchMedia('screen and (max-width: 767px)');
 
-        if(ipad.matches) {
-            burgerButton.addEventListener('click', hideShow);
-        }
-
-
+        
         ipad.addListener(validation);
 
         function validation(event){
@@ -168,6 +164,8 @@
 
             }
         }
+
+        validation(ipad);
 
         function hideShow(){
             if (menu.classList.contains('is-active')){
