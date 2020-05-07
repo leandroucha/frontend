@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamaño de item en columnas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        .container{
+            display: grid;
+            grid-template: [start] 200px [line1] 200px [end]/* filas */ / [start] 1fr [line2] 1fr [line3] 1fr [destacado-end] 1fr [line5] 1fr [destacado2-end] 1fr [line7] 1fr [end] /* columnas */;
+            height: 100vh;
+            gap: 1px;
+        }
+        
+        .item{
+            background: skyblue;
+            border: 5px solid red;
+            text-align: center;
+        }
+
+        .item:nth-of-type(1){
+            /* grid-column: 1 / span 3;
+            grid-column: 1 / -1; */
+            grid-column: start / destacado-end;
+            grid-row: start / end;
+        }
+
+        .item:nth-of-type(2){
+            /* grid-column: 1 / span 3;
+            grid-row: 2 / span 2; */
+            grid-column: destacado-end / destacado2-end;
+            grid-row: start / end;
+        }
+
+        .item:nth-of-type(3){
+            /* grid-column: 4 / span 2;
+            grid-row: 2 / span 2; */
+            grid-column: destacado2-end / end;
+        }
+
+        .item:nth-of-type(4){
+            /* grid-column: 6 / span 2; */
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movi.es</title>
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+
+    h2{
+        margin: 0;
+    }
+    .border{
+        border: 1px solid red;
+    }
+    .container{
+        margin: 0;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 70px 1fr;
+        height: 100%;
+        max-width: 1280px;
+        
+    }
+    .header{
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em;
+    }
+    .icon:nth-of-type(4){
+        background: red;
+            align-self: start;
+            justify-self: start;
+        }
+    .sidebar{
+        background: pink;
+    }
+    .menu i{
+        display: inline-block;
+    }
+    .menu p{
+        display: inline-block;
+    }
+    .logo{
+        margin: 0;
+    }
+
+    .movie-container{
+        display: grid;
+        background: #b1b1b1;
+        grid-template-rows: repeat(autofill, 1fr);
+        gap: 1.5em;
+    }
+    .movie-category{
+        padding: 1.5em;
+        display: grid;
+        grid-template-rows: 100px, 1fr;
+        grid-template-columns: repeat(auto-fill, 250px);
+        gap: 1.5em;
+        justify-content: center;
+        gap: 2em;
+    }
+    
+    .category-title{
+        grid-column: 1 / -1;
+    }
+
+    .movie{
+        display: flex;
+        width: 258px;
+    }
+
+</style>
+<body>
+    <div class="border container">
+        <header class="border header">
+            <figure class="logo">
+                <img src="logo.png" alt="" width="100px">
+            </figure>
+            <div class="form">
+                <form class="form" action="search">
+                    <input id="search" type="text" placeholder="Busca tu película">
+                </form>
+            </div>
+            <nav class="menu">
+                <p>User Name</p>
+                <img src="user.png" alt="" width="25px" >
+                <i>v</i>
+            </nav>
+        </header>
+        <section class="border sidebar">
+            <a href="" class="border icon"><img src="icon.png" width="50px" alt=""></a>
+            <a href="" class="border icon"><img src="icon.png" width="50px" alt=""></a>
+            <a href="" class="border icon"><img src="icon.png" width="50px" alt=""></a>
+            <a href="" class="border icon"><img src="icon.png" width="50px" alt=""></a>
+        </section>
+
+        <section class="border movie-container">
+            <section class="border movie-category">
+                <h2 class="category-title">Category 1</h2>
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+            </section>
+            <section class="border movie-category">
+                <h2 class="category-title">Category 2</h2>
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+            </section>
+            <section class="border movie-category">
+                <h2 class="category-title">Category 3</h2>
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+
+                <article class="border movie">
+                    <img src="movie.png" alt="">
+                </article>
+            </section>
+        </section>
+
+         <!-- <section class="border movie-container">
+            <div class="border movie-category">
+                <h2 class="category-title">Category 1</h2>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 1</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 2</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 3</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+            </div>
+        </section>  -->
+
+            <!--
+        <section class="border movie-container">
+            <div class="border movie-category">
+                <h2 class="category-title">Category 2</h2>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 1</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 2</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 3</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+            </div>
+
+        <section class="border movie-container">
+            <div class="border movie-category">
+                <h2 class="category-title">Category 3</h2>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 1</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 2</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+                <article class="border movie">
+                    <figure class="border movie-image-container">
+                        <img class="border movie-image" src="movie.png" alt="" width="200px">
+                    </figure>
+                    <div class="border movie-details">
+                        <h3 class="border movie-title">Movie Title 3</h3>
+                        <p class="border movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit, laboriosam magni molestias rerum corrupti? Beatae, quod nostrum. Quidem accusantium perspiciatis dolores cupiditate eum dolor, cum mollitia vero provident ut?</p>
+                    </div>
+                </article>
+            </div>
+
+-->
+</body>
+</html>
+

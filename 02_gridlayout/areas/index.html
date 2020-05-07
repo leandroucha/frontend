@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        .container{
+            display: grid;
+            grid-template: 100px 1fr 150px/* filas */ / 200px 1fr; /* columnas */
+            gap: 10px;
+            height: 100vh;
+            /* se setean y organizan las areas */
+            grid-template-areas:    "header header" 
+                                    "left content" 
+                                    "footer footer";
+        }
+        
+        /* se le agregan las propiedades a las areas mediante los selectores de clase que se setearon abajo */
+        .item{
+            background: skyblue;
+            border: 5px solid red;
+            border-radius: 10px;
+            text-align: center;
+            
+        }
+        .header{
+            grid-area: header;
+        }
+        .left{
+            grid-area: left;
+        }
+        .content{
+            grid-area: content;
+        }
+        .footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item header">header</div>
+        <div class="item left">left</div>
+        <div class="item content">content</div>
+        <div class="item footer">footer</div>
+    </section>
+</body>
+</html>
