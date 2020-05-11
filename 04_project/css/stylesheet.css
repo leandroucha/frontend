@@ -1,6 +1,9 @@
+html {
+  scroll-padding-top: 75px; /* height of sticky header */
+}
 .bg-red{
   background-color: #AF242C;
-  border: 1px #AF242C solid;
+  border: 3px #AF242C solid;
 }
 
 .bg-lightgray{
@@ -43,10 +46,6 @@
 #header img{
   width: 80px;
 }
-.sticky-offset {
-  top: 56px;
-}
-
 #footer{
   background: #121314;
 }
