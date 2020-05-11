@@ -48,6 +48,11 @@
     .sidebar{
         background: #1a1a1a;
     }
+    .sidebar a{
+        display: inline;
+        padding: 1em;
+
+    }
     .logo{
         margin: 0;
     }
@@ -85,7 +90,6 @@
     .movie-details{
             background: rgba(0, 0, 0, .4);
             position: absolute;
-            top: 10;
             left: 0;
             right: 0;
             bottom: 0;
@@ -107,7 +111,7 @@
     
 </style>
 <body>
-    <div class="border container">
+    <div class="border container" id="home">
         <header class="border header">
             <figure class="logo">
                 <img src="logo.png" alt="" width="100px">
@@ -417,9 +421,9 @@
                 </article>
 
             </section>
-
+            <a href="#home">volver</a>            
         </section>
-            
+
 </body>
 </html>
 

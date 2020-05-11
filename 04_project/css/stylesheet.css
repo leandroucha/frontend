@@ -1,0 +1,65 @@
+.bg-red{
+  background-color: #AF242C;
+  border: 1px #AF242C solid;
+}
+
+.bg-lightgray{
+  background-color: #777777;
+}
+
+.btn-red{
+  background-color: #AF242C !important;
+  color: white;
+  border: 1px #AF242C solid;
+}
+
+.btn-red:hover{
+  background-color: black;
+  color: white;
+}
+
+#carousel {
+  position: relative;
+}
+
+#carousel .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  z-index: 1;
+}
+
+#main .carousel-inner img{
+  max-height: 90vh;
+  object-fit: cover;
+  filter: grayscale(70%);
+}
+
+
+#header img{
+  width: 80px;
+}
+.sticky-offset {
+  top: 56px;
+}
+
+#footer{
+  background: #121314;
+}
+
+#footer a{
+  color: white;
+}
+
+.header {
+  background-color: #F5F5F5;
+  color: #36A0FF;
+  height: 70px;
+  font-size: 27px;
+  padding: 10px;
+}
+
