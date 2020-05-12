@@ -69,6 +69,16 @@ html {
 #header img{
   width: 80px;
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a.hover{
+  text-decoration: none;
+  color: black;
+}
 #footer{
   background: #121314;
 }
