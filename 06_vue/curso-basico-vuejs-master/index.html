@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Curso Basico de Vue.js | Platzi</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app">
+    <img 
+      v-on:mouseover="toggleShowPrices" 
+      v-on:mouseout="toggleShowPrices" 
+      v-bind:src="img" v-bind:alt="name">
+    <h1>
+      {{ name }}
+      <span v-if="changePercent > 0">👆</span>
+      <span v-else-if="changePercent < 0">👇</span>
+      <span v-else>🤞</span>
+      <button v-on:click="toggleShowPrices">{{showPrices ? 'Ocultar precios' : 'Ver precios'}}</button> <!-- Una turnary es como un if:  testCondition ? 'true' : 'false' -->
+    </h1>
+
+    
+
+      <!-- <span v-show="changePercent > 0">👆</span>
+      <span v-show="changePercent < 0">👇</span>
+      <span v-show="changePercent == 0">🤞</span> -->
+
+      <!-- <ul>
+        <li v-for="(p, i) in prices" v-biu¡bd:key="p">{{ i }} {{ p }}</li>
+      </ul> -->
+
+      
+      <!-- <li v-for="(p, i) in pricesWithDays" v-biu¡bd:key="p.day">{{ i }} {{p.day}} {{ p.value }}</li> -->
+      <table v-show="showPrices == true" style="border: 1px solid black;">
+        <tr>
+          <td>Index</td>
+          <td>Dia de la semana</td>
+          <td>Valor</td>
+        </tr>
+        <tr v-for="(p, i) in pricesWithDays" v-biu¡bd:key="p.day">
+          <td>{{ i }}</td>
+          <td>{{p.day}}</td>
+          <td> {{ p.value }}</td>
+        </tr>
+      </table>
+
+   
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
