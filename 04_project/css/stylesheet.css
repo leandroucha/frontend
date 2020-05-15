@@ -157,3 +157,21 @@ ul.timeline > li:before {
 ul.timeline > li:nth-child(2):before{
   background: #AF242C;
 }
+
+.box{
+  padding:60px 0px;
+}
+
+.box-part{
+  background:#FFF;
+  border-radius:0;
+  padding:20px 10px;
+  margin:10px 0px;
+}
+
+.box-part img{
+  width: 2em;
+}
+.text{
+  margin:20px 0px;
+}

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Servicio Mecánico Leguizamón</title>
   </head>
   <body data-spy="scroll" data-target="#navbar" data-offset="85"  id="main">
@@ -141,13 +142,13 @@
         </div>
       </div>
       <div class="row py-4">
-        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div id="app" class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
           <div class="card">
             <div class="card-body">
               <form>
                 <div class="form-group">
                   <label for="patente">Patente</label>
-                  <input type="text" class="form-control" id="patente" aria-describedby="patenteHelp">
+                  <input type="text" class="form-control" v-model="item" id="patente" aria-describedby="patenteHelp">
                   <small id="patenteHelp" class="form-text text-muted">Ingrese la patente sin espacios, ni guiones.</small>
                 </div>
                 <div class="form-group">
@@ -155,10 +156,12 @@
                   <input type="text" class="form-control" id="idReparacion" aria-describedby="reparacionHelp">
                   <small id="reparacionHelp" class="form-text text-muted">Ingrese el código que le enviamos.</small>
                 </div>
-                <a href="reparacion.html" type="submit" class="btn btn-red">Ver estado de reparación</a>
+                <button @click.prevent="addItem" class="btn btn-red">Ver estado de reparación</button>
+                <!--<a href="reparacion.html" type="submit" class="btn btn-red">Ver estado de reparación</a>-->
               </form>
             </div>
           </div>
+          <p>{{ items }}</p>
         </div>
       </div>
     </div>
@@ -228,7 +231,25 @@
     </footer>
     <!-- /Footer -->
 
-  
+    <script>
+      var app = new Vue ({
+                el: '#app',
+                data: {
+                    item: '',
+                    items: [],
+                    itemData: ''
+                },
+                methods: {
+                    addItem: function(){
+                        fetch('https://jsonplaceholder.typicode.com/posts/'+this.item,)
+                        .then(response => response.json())
+                        .then(json => this.items = json.body)
+                        .then(json => console.log(this.items))
+                        console.log(this.item);
+                    }
+                }
+            })
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
