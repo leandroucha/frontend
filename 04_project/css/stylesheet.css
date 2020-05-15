@@ -3,6 +3,12 @@ html, body {
   scroll-padding-top: 75px; /* height of sticky header */
   scroll-behavior: smooth;
 }
+.bold{
+  font-weight:  700;
+}
+.semi-bold{
+  font-weight:  600;
+}
 .bg-red{
   background-color: #AF242C;
   border: 3px #AF242C solid;
