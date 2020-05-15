@@ -90,6 +90,7 @@ a.hover{
 }
 #footer{
   background: #121314;
+  position : absolute;
 }
 
 #footer a{
