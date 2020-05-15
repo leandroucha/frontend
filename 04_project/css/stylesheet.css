@@ -1,4 +1,6 @@
 html, body {
+
+  position: relative;
   font-family: 'Montserrat', sans-serif;;
   scroll-padding-top: 75px; /* height of sticky header */
   scroll-behavior: smooth;
@@ -90,7 +92,6 @@ a.hover{
 }
 #footer{
   background: #121314;
-  position : absolute;
 }
 
 #footer a{
