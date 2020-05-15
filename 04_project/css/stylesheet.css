@@ -1,4 +1,5 @@
-html {
+html, body {
+  font-family: 'Montserrat', sans-serif;;
   scroll-padding-top: 75px; /* height of sticky header */
   scroll-behavior: smooth;
 }
