@@ -175,7 +175,6 @@ ul.timeline > li:nth-child(2):before{
   border-radius:0;
   padding:20px 10px;
   margin:10px 0px;
-  min-height: 35vh;
   box-shadow: 0 5px 30px -5px #ddd;
 }
 
@@ -195,4 +194,44 @@ ul.timeline > li:nth-child(2):before{
 
 .desaturate:hover {
   filter: grayscale(0%);
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .box-part {
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .box-part {
+    min-height: 38vh;
+  }
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .box-part {
+    min-height: 34vh;
+  }
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .box-part {
+    min-height: 40vh;
+  }
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .box-part {
+    min-height: 33vh;
+  }
+  
 }
