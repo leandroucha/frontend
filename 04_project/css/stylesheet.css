@@ -101,7 +101,7 @@ a.hover{
   }
 .contacto{
   background-color: #F5F5F5;
-  height: 85vh;
+  min-height: 85vh;
   }
 
 
