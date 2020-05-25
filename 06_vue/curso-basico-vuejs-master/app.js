@@ -43,6 +43,9 @@ Vue.component('CoinDetail',{
         </h1>
         <input type="number" v-model="value">
         <span> {{ convertedValue }} </span>
+        <slot name="text"></slot>
+        <slot name="link"></slot>
+
         <table v-show="showPrices == true" style="border: 1px solid black;">
           <tr>
             <td>Index</td>
@@ -82,6 +85,16 @@ new Vue({
       color: 'f4f4f4',
     }
   },
+
+  created(){
+    console.log('Created...')
+  },
+
+  mounted(){
+    console.log('Mounted...')
+
+  },
+
   methods: {
     updateColor (color) {
       this.color = color || this.color
