@@ -216,7 +216,7 @@ ul.timeline > li:nth-child(2):before{
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .box-part {
-    min-height: 280px;
+    min-height: 255px;
   }
   
 }
