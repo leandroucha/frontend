@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.4.0/dist/vuex.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <titulo></titulo>
+        
+    </div>
+
+    <script>
+        Vue.component('titulo',{
+            template: 
+            `
+            <div>
+                <button @click="aumentar">+</button>
+                <button @click="disminuir(2)">-</button>
+                <h1>numero {{numero}}</h1>
+                <hijo></hijo>
+            </div>
+            `,
+            computed:{
+                ...Vuex.mapState(['numero'])
+            },
+            methods:{
+                ...Vuex.mapMutations(['aumentar','disminuir'])
+            }
+        });
+
+        Vue.component('hijo',{
+            template: 
+            `
+            <div>
+                <button @click="aumentar">+</button>
+                <button @click="disminuir(2)">-</button>
+                <button @click="obtenerCursos">Obtener Cursos</button>
+                <h1>numero {{numero}}</h1>
+                <ul v-for="item of cursos">
+                    <li>{{item.nombre}}</li>
+                </ul>
+            </div>
+            `,
+            computed:{
+                ...Vuex.mapState(['numero','cursos'])
+            },
+            methods:{
+                ...Vuex.mapMutations(['aumentar','disminuir']),
+                ...Vuex.mapActions(['obtenerCursos']) //06.mappeamos para obtener los cursos que llamamos con un boton mas arriba
+            }
+        });
+
+
+        const store = new Vuex.Store({
+            state: {
+                numero: 10,
+                cursos: [] //05. esta es el array que llena la mutacion de llenarCursos
+            },
+            mutations:{
+                aumentar(state){
+                    state.numero ++
+                },
+                disminuir(state,n){
+                    state.numero -= n
+                },
+                llenarCursos(state,cursosAccion){ //04. esta mutacion llena los cursos con lo commiteado abajo
+                    state.cursos = cursosAccion
+                }
+            },
+            actions: { //01. creamos una accion
+                obtenerCursos: async function ({commit}){
+                    const data = await fetch('cursos.json'); //02. que llama a una API o base de datos
+                    const cursos = await data.json(); 
+                    commit('llenarCursos',cursos) //03. cuando tiene los datos, el commit ejecuta la mutacion de arriba
+                }
+            }
+        });
+
+
+
+        new Vue ({
+            el: '#app',
+            store
+        })
+
+
+    </script>
+</body>
+</html>
