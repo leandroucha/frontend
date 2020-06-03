@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div id="nav" >
       <a href="https://api.whatsapp.com/send?phone=5493413003771&text=Hola%21+Cu%C3%A1ndo+puedo+pasar+a+dejarles+el+auto%3F" class="float" target="_blank">
       <i class="fa fa-whatsapp my-float"></i>
       </a>
@@ -34,6 +34,7 @@
     <!-- /Header -->
     
     <router-view/>
+
     <!-- Footer -->
     <footer id="footer" class="pb-4 pt-4">
         <div class="container">
